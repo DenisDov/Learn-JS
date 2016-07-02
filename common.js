@@ -88,7 +88,7 @@ var lastLetterOfFirstName = firstName[firstName.length - 2];
 function wordBlanks(myNoun, myAdjective, myVerb, myAdverb) {
   var result = "";
   result += "My " + myAdjective + " " + myNoun + " " + myVerb + " " + myAdverb;
-  return result.;
+  return result;
 }
 wordBlanks("dog", "big", "ran", "quickly");
 
@@ -168,7 +168,6 @@ function process(num) {
 }
 processed = process(7); //2
 
-=== === === === === === === === === === === === === === === === === === === ===
 //Queue
 function queue(arr, item) {
 
@@ -183,7 +182,6 @@ console.log("Before: " + JSON.stringify(testArr));
 console.log(queue(testArr, 6)); //1
 console.log("After: " + JSON.stringify(testArr));
 
-=== === === === === === === === === === === === === === === === === === === ===
 //Boolean
 function welcomeToBooleans() {
 
@@ -418,13 +416,13 @@ var myObj = {
 function checkObj(checkProp) {
 
   var result = myObj[checkProp];
-  
+
   if(myObj.hasOwnProperty(checkProp)) {
     return result;
   } else {
     return "Not Found";
   }
-  
+
 }
 
 checkObj("gift");
@@ -451,7 +449,7 @@ console.log(power(2, 10));
 //  while(count < 3){
 //    count++;
 //    console.log("I'm looping!");
-    
+
 //  }
 // };
 
@@ -473,7 +471,7 @@ console.log(power(2, 10));
 // var loopCondition = false;
 
 // do {
-//  console.log("I'm gonna stop looping 'cause my condition is " + loopCondition + "!");  
+//  console.log("I'm gonna stop looping 'cause my condition is " + loopCondition + "!");
 // } while (loopCondition);
 
 var getToDaChoppa = function(){
@@ -530,9 +528,9 @@ var myArray = [4, false, "OK", {
     age: 32,
     name: "Denis"
     }];
-    
-console.log(myArray[3].name); 
-// 
+
+console.log(myArray[3].name);
+//
 var newArray = [
     ["Name", 32, true, false],
     ["sfsf", 23,
@@ -540,7 +538,7 @@ var newArray = [
         name: "Denis",
         age: "30"
         }
-    ]     
+    ]
 ];
 
 console.log(newArray[1][2].name);
@@ -550,7 +548,7 @@ var myObject = {
   type: 'Most excellent',
   // Add your code here!
   interests: ["JS", "Python", "CSS"]
-  
+
 };
 
 console.log(myObject.interests[0]);
@@ -571,15 +569,15 @@ for(let i = 1; i <= 20; i++) {
   }
   else if(i % 5 ==0) {
     console.log("Buzz")
-  }    
+  }
   else {
     console.log(i)
-  }             
+  }
 }
 
 //Switch return
 var getReview = function (movie) {
-    
+
     switch(movie){
         case "Toy Story 2":
             return "Great story. Mean prospector.";
@@ -590,7 +588,7 @@ var getReview = function (movie) {
         case "The Lion King":
             return "Great songs.";
             break;
-        default: 
+        default:
             return "I don't know!";
     }
 
@@ -639,3 +637,18 @@ var bob = new Person("Bob Smith", 30);
 var susan = new Person("Susan Jordan", 25);
 // help us make george, whose name is "George Washington" and age is 275
 var george = new Person("George Washington", 275);
+
+
+// Arrays of Objects
+function Person (name, age) {
+    this.name = name;
+    this.age = age;
+}
+
+// Now we can make an array of people
+var family = new Array();
+family[0] = new Person("alice", 40);
+family[1] = new Person("bob", 42);
+family[2] = new Person("michelle", 8);
+// add the last family member, "timmy", who is 6 years old
+family[3] = new Person("timmy", 6);

@@ -439,3 +439,203 @@ var power = function(base, exponent) {
 };
 
 console.log(power(2, 10));
+
+//
+// //Date
+// document.getElementById("demo").innerHTML = Date();
+
+// //While
+// var count = 0;
+
+// var loop = function(){
+//  while(count < 3){
+//    count++;
+//    console.log("I'm looping!");
+    
+//  }
+// };
+
+// loop();
+// //Another while
+// var condition = true;
+
+// var soloLoop = function(){
+//   while ( condition ) {
+//       console.log("Looped once!");
+//       condition = false;
+//     }
+// };
+
+// soloLoop();
+
+// //do while
+
+// var loopCondition = false;
+
+// do {
+//  console.log("I'm gonna stop looping 'cause my condition is " + loopCondition + "!");  
+// } while (loopCondition);
+
+var getToDaChoppa = function(){
+  // Write your do/while loop here!
+  var age = 18;
+  do {
+   console.log("Your age is " + age);
+    }
+    while(age < 18);
+};
+
+getToDaChoppa();
+
+//Let loop
+for (let i = 10; i > 0; i--) {
+    console.log(i);
+    }
+//Switch
+//var candy = prompt("What's your favorite candy?","Type your favorite candy here.");
+
+switch(candy) {
+  case 'licorice':
+    console.log("Gross!");
+    break;
+  case 'gum':
+    console.log("I like gum!");
+    break;
+  case 'beets':
+    console.log("...is that even a candy?");
+    break;
+  // Add your code here!
+  default:
+    console.log("I don't know that candy!");
+}
+//Loop Aray
+var languages = ["HTML", "CSS", "JavaScript", "Python", "Ruby"];
+
+for(let i = 0; i < languages.length; i++) {
+    console.log("I want to learn "+ languages[i]);
+    }
+//Objects
+var phonebookEntry = {};
+
+phonebookEntry.name = 'Oxnard Montalvo';
+phonebookEntry.number = '(555) 555-5555';
+phonebookEntry.phone = function() {
+  console.log('Calling ' + this.name + ' at ' + this.number + '...');
+};
+
+phonebookEntry.phone();
+
+//Array Object
+var myArray = [4, false, "OK", {
+    age: 32,
+    name: "Denis"
+    }];
+    
+console.log(myArray[3].name); 
+// 
+var newArray = [
+    ["Name", 32, true, false],
+    ["sfsf", 23,
+        {
+        name: "Denis",
+        age: "30"
+        }
+    ]     
+];
+
+console.log(newArray[1][2].name);
+//
+var myObject = {
+  name: 'Eduardo',
+  type: 'Most excellent',
+  // Add your code here!
+  interests: ["JS", "Python", "CSS"]
+  
+};
+
+console.log(myObject.interests[0]);
+//
+var myOwnObject = new Object();
+
+myOwnObject.name = "Denis";
+myOwnObject.age = 32;
+
+console.log(myOwnObject.age);
+
+//FizzBuzz
+for(let i = 1; i <= 20; i++) {
+  if(i % 3 == 0 && i % 5 == 0) {
+    console.log("FizzBuzz")
+  } else if (i % 3 == 0) {
+    console.log("Fizz")
+  }
+  else if(i % 5 ==0) {
+    console.log("Buzz")
+  }    
+  else {
+    console.log(i)
+  }             
+}
+
+//Switch return
+var getReview = function (movie) {
+    
+    switch(movie){
+        case "Toy Story 2":
+            return "Great story. Mean prospector.";
+            break;
+        case "Finding Nemo":
+            return "Cool animation, and funny turtles.";
+            break;
+        case "The Lion King":
+            return "Great songs.";
+            break;
+        default: 
+            return "I don't know!";
+    }
+
+};
+
+
+getReview("The Lion King");
+
+//THIS
+
+var setAge = function (newAge) {
+  this.age = newAge;
+};
+
+var susan = new Object();
+susan.age = 25;
+susan.setAge = setAge;
+susan.setAge(35);
+
+//OBJECTS
+var square = new Object();
+square.sideLength = 6;
+square.calcPerimeter = function() {
+  return this.sideLength * 4;
+};
+// help us define an area method here
+square.calcArea = function() {
+  //return this.sideLength * this.sideLength;
+  return Math.pow(this.sideLength,2)
+};
+
+var p = square.calcPerimeter();
+var a = square.calcArea(10);
+
+console.log(a)
+
+//Constructor
+
+function Person(name,age) {
+  this.name = name;
+  this.age = age;
+}
+
+// Let's make bob and susan again, using our constructor
+var bob = new Person("Bob Smith", 30);
+var susan = new Person("Susan Jordan", 25);
+// help us make george, whose name is "George Washington" and age is 275
+var george = new Person("George Washington", 275);

@@ -652,3 +652,87 @@ family[1] = new Person("bob", 42);
 family[2] = new Person("michelle", 8);
 // add the last family member, "timmy", who is 6 years old
 family[3] = new Person("timmy", 6);
+
+
+// LOOP THE LOOP=================================================
+function Person(name, age) {
+    this.name = name;
+    this.age = age;
+};
+
+// Now we can make an array of people
+var family = new Array();
+family[0] = new Person("alice", 40);
+family[1] = new Person("bob", 42);
+family[2] = new Person("michelle", 8);
+family[3] = new Person("timmy", 6);
+
+// loop through our new array
+for(let i = 0; i < family.length; i++ ) {
+    console.log("My family years is "+ family[i].name);
+}
+
+// Get Older PErson =============================================================
+function Person (name, age) {
+    this.name = name;
+    this.age = age;
+}
+
+// We can make a function which takes persons as arguments
+// This one computes the difference in ages between two people
+var ageDifference = function(person1, person2) {
+    return person1.age - person2.age;
+};
+
+// Make a new function, olderAge, to return the age of
+// the older of two people
+var olderAge = function(person1, person2) {
+    return Math.max(person1.age, person2.age);
+};
+
+
+
+// Let's bring back alice and billy to test our new function
+var alice = new Person("Alice", 30);
+var billy = new Person("Billy", 25);
+
+console.log("The older person is " + olderAge(alice, billy));
+
+//Circle function
+function Circle (radius) {
+    this.radius = radius;
+    this.area = function () {
+        return Math.PI * this.radius * this.radius;
+
+    };
+    // define a perimeter method here
+    this.perimeter = function() {
+        return 2 * Math.PI * this.radius
+    };
+
+};
+
+//Displaying People
+var bob = {
+    firstName: "Bob",
+    lastName: "Jones",
+    phoneNumber: "(650) 777-7777",
+    email: "bob.jones@example.com"
+};
+
+var mary = {
+    firstName: "Mary",
+    lastName: "Johnson",
+    phoneNumber: "(650) 888-8888",
+    email: "mary.johnson@example.com"
+};
+
+var contacts = [bob, mary];
+
+// printPerson added here
+function printPerson (person) {
+    console.log(person.firstName + ' ' + person.lastName)
+};
+
+printPerson(contacts[0]);
+printPerson(contacts[1]);

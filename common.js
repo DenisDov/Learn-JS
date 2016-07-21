@@ -875,3 +875,35 @@ if(suitcase.hasOwnProperty('shorts')) {
     suitcase.shorts = "red";
     console.log(suitcase.shorts)
 }
+
+//List ALL the Properties!
+var nyc = {
+    fullName: "New York City",
+    mayor: "Bill de Blasio",
+    population: 8000000,
+    boroughs: 5
+};
+
+// write a for-in loop to print the value of nyc's properties
+
+for(var key in nyc){
+     console.log(nyc[key])   
+}
+
+//Classes 
+function Person(name,age) {
+  this.name = name;
+  this.age = age;
+}
+// a function that prints the name of any given person
+var printPersonName = function (p) {
+  console.log(p.name);
+};
+
+var bob = new Person("Bob Smith", 30);
+printPersonName(bob);
+
+// make a person called me with your name and age
+// then use printPersonName to print your name
+var me = new Person("Denis", 32);
+printPersonName(me);

@@ -863,3 +863,15 @@ list();
 
 var user = new Person("Codecademy Student",false);
 user.speak();
+
+//Dressed to Impress
+var suitcase = {
+    shirt: "Hawaiian"
+};
+
+if(suitcase.hasOwnProperty('shorts')) {
+    console.log(suitcase.shorts)
+} else {
+    suitcase.shorts = "red";
+    console.log(suitcase.shorts)
+}

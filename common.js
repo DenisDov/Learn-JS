@@ -1235,9 +1235,11 @@ console.log('Your bill is '+cashRegister.total.toFixed(2));
 
 //Callback
 function add(a, b, callback) { 
-	const result = a + b callback(result)
+	const result = a + b;
+	callback(result)
 } 
 function log(result) { 
 	console.log(result) 
 } 
+
 add(3, 4, log) //= 7

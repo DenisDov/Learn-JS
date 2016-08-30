@@ -1243,3 +1243,13 @@ function log(result) {
 } 
 
 add(3, 4, log) //= 7
+
+// Call
+var obj = {
+  num: 2
+};
+
+var AddToThis = function(n){
+  return "This num is " + this.num + n
+};
+console.log(AddToThis.call(obj, 5)); //"This num is 25"
